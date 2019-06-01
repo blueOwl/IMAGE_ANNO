@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<main role="main">
+        <section class="jumbotron text-center">
+                <div class="container">
+                  <h1 class="jumbotron-heading">Welcome to IMAGE project annotation database</h1>
+                  <p class="lead text-muted">Here you can find all of the documents and links related to IMAGE project's annotation datasets</p>
+                </div>
+        </section>
+        <div>
+            <h2>Sample VCF file for GUI VCF query:</h2> <a href="{% static 'main/sample.vcf'%}">download </a>
+        </div>
+</main>
+<style>
+.centered {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 8px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+.item {
+    
+    font-size: 2em;
+    color: #444;
+    font-weight: bold;
+
+}
+</style>
+{% endblock %}

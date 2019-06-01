@@ -1,0 +1,27 @@
+{% extends 'main/bootstrap.html' %}
+
+{% load bootstrap4 %}
+{% load static %}
+
+{% block bootstrap4_content %}
+        <header>
+                <div class="navbar navbar-dark bg-dark box-shadow">
+                    <div class="container d-flex justify-content-between">
+                    <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
+                        <strong>IMAGE annotation</strong>
+                    </a>
+                    </div>
+                </div>
+        </header>
+        
+
+
+    {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+    {% block content %}(no content){% endblock %}
+    <div class="footer navbar-fixed-bottom" style="background-color:#212529;">
+        <p class="container-fluid" align="center"> 
+          <img src="{% static 'main/img/image_logo.gif'%}" style="height:80px" alt="USC IMAGE logo">
+        </p>
+    </div>
+{% endblock %}
